@@ -22,7 +22,7 @@ namespace Play.Common.Identity
                 var serviceSettings = _configuration.GetSection(nameof(ServiceSettings))
                                                     .Get<ServiceSettings>();
 
-                options.Authority = serviceSettings.Authoriry;
+                options.Authority = serviceSettings.Authority;
                 options.Audience = serviceSettings.ServiceName;
                 options.MapInboundClaims = false;
                 options.TokenValidationParameters = new TokenValidationParameters
